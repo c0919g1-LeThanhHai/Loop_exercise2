@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let w = Number(prompt("Nhập chiều dài"));
+    let h = Number(prompt("Nhập chiều rộng"));
+    let result = "";
+    for(let i = 1; i <= h; i++) {
+        for(let j = 1; j <= w; j++) {
+            if(i == 1||i == h||j == 1||j == w) {
+                result += "* ";
+                if(j == w) {
+                    result += "<br>";
+                }
+            } else {
+                result += "&nbsp;&nbsp;&nbsp;";
+            }
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>

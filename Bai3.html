@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tg, tg2, tg3, tg4;
+    tg = tg2 = tg3 = tg4 = "";
+    let num = Number(prompt("Nhập h"));
+
+    for(let i = 1; i<=num; i++) {
+        for(let j = 1; j <= i; j++) {
+            tg+="*&nbsp;&nbsp;";
+        }
+        tg+="<br>";
+    }
+    document.write(tg+"<br>");
+
+    for(let i = 1; i<=num; i++) {
+        for(let j = num; j >= i; j--) {
+            tg2+="*&nbsp;&nbsp;";
+        }
+        tg2+="<br>";
+    }
+    document.write(tg2+"<br>");
+
+    for(let i=0; i<num; i++) {
+        for(let j=0; j<num; j++) {
+            if(j==num-1||j==num-1-i||j>num-1-i) {
+                tg3+="*&nbsp;&nbsp;";
+                if(j==num-1){
+                    tg3+="<br>";
+                }
+            } else {
+                tg3+="&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+    }
+    document.write(tg3+"<br>");
+
+    for(let i = 0; i < num; i++) {
+        for(let j = 0; j < num ; j++) {
+            if(j == num-1||j==i || j > i)
+            {
+                tg4+="*&nbsp;&nbsp;";
+                if(j == num-1) {
+                    tg4+="<br>";
+                }
+            } else {
+                tg4 += "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+
+        }
+    }
+    document.write(tg4);
+
+
+</script>
+</body>
+</html>

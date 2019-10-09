@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienVay = Number(prompt("Nhập số tiền cần vay"));
+    let thangVay = Number(prompt("Nhập số tháng vay"));
+    let lai = Number(prompt("Nhập lãi xuất hàng tháng"));
+    let tienVayCu = tienVay;
+    let tienLai;
+    for(let i=1;i<=thangVay;i++) {
+        tienLai = (tienVay * lai)/100;
+        tienVay += tienLai;
+        document.write("Tiền lãi tháng "+i+" với lãi xuất "+lai+"(%): "+Math.round(tienLai)+"<br>");
+        document.write("Số tiền vay sau tháng thứ "+i+" (bao gồm tiền lãi): "+Math.round(tienVay)+"<br><br>");
+    }
+    let tongLai = tienVay - tienVayCu;
+    document.write("Tổng số tiền lãi phải trả: "+Math.round(tongLai));
+</script>
+</body>
+</html>
